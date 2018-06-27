@@ -4,13 +4,11 @@
   "description": "A test task for NetEnt",
   "main": "index.js",
   "scripts": {
-    "test:unit": "concurrently \"npm run test:unit:client\" && \"npm run test:unit:server\"",
-    "test:unit:client": "echo 'No client tests'",
-    "test:unit:server": "jest --notify --config=jest.config.json",
+    "test:unit": "jest --notify --config=jest.config.json",
     "test:e2e": "echo 'No e2e tests'",
     "lint": "eslint --ext .js,.spec.js app",
     "start": "node app/server/index.js 3000",
-    "test": "concurrently \"npm run test:unit\" && \"npm run test:e2e\"",
+    "test": "npm run test:unit && npm run test:e2e",
     "qa": "npm run lint && npm run test"
   },
   "keywords": [],

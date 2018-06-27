@@ -1,7 +1,6 @@
 const GameController = require('./controller');
 
 describe('Game controller ->', () => {
-    a = () => {};
     let ctrl;
     let combination;
     let mockGameRules = {
