@@ -6,7 +6,7 @@ Progress:
 * [x] Unit tests for a server logic
 * [x] Api documentation
 * [x] Client logic
-* [ ] e2e tests
+* [x] e2e tests
 * [x] Coverage report
 * [x] Favicon
 * [ ] Private repo on BitBucket (https://bitbucket.org/ViacheslavMoskalenko/netent/src)
