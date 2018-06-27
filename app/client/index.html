@@ -4,8 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Game</title>
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/animations.css" />
+    <link rel="icon" href="src/img/favicon.ico" />
+    <link rel="prefetch" href="src/img/Symbol_0.png" />
+    <link rel="prefetch" href="src/img/Symbol_1.png" />
+    <link rel="prefetch" href="src/img/Symbol_2.png" />
+    <link rel="prefetch" href="src/img/Symbol_3.png" />
+    <link rel="prefetch" href="src/img/Symbol_4.png" />
+    <link rel="prefetch" href="src/img/Symbol_5.png" />
 </head>
 <body>
-    <h1>It works!</h1>
+    <div class="game">
+        <output tabindex="1" class="game__output">Press button to launch a game</output>
+        <div class="game__panel" tabindex="2">
+            <div tabindex="3" class="game__brick" data-pristine></div>
+            <div tabindex="4" class="game__brick" data-pristine></div>
+            <div tabindex="5" class="game__brick" data-pristine></div>
+        </div>
+        <button tabindex="6" class="game__start-btn"></button>
+    </div>
+    <script type="module" src="src/js/main.js"></script>
 </body>
 </html>

@@ -4,6 +4,6 @@
   "coverageDirectory": "./coverage",
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "app/**"
+    "app/server/**"
   ]
 }

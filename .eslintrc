@@ -7,5 +7,11 @@
     "comma-dangle": "off",
     "arrow-parens": "off",
     "max-len": ["error", {"code": 100}]
-  }
+  },
+  "overrides": [{
+    "files": ["app/client/**/*.js"],
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  }]
 }

@@ -6,7 +6,9 @@
   "scripts": {
     "test:unit": "jest --notify --config=jest.config.json",
     "test:e2e": "echo 'No e2e tests'",
-    "lint": "eslint --ext .js,.spec.js app",
+    "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\"",
+    "lint:js": "eslint --ext .js,.spec.js app",
+    "lint:css": "stylelint app/client/**/*.css",
     "start": "node app/server/index.js 3000",
     "test": "npm run test:unit && npm run test:e2e",
     "qa": "npm run lint && npm run test"
@@ -23,6 +25,8 @@
     "eslint-config-google": "^0.9.1",
     "jest": "^23.2.0",
     "nock": "^9.3.3",
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-recommended": "^2.1.0"
   }
 }

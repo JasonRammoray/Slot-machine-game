@@ -1,0 +1,81 @@
+html {
+    font: normal 14px/1 Verdana, sans-serif;
+    position: relative;
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    padding: 15vh 20vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.game__output {
+    font-size: 2.2rem;
+    width: 100%;
+}
+
+.game__panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game__brick {
+    flex: 1 1 33.33%;
+    height: 156px;
+    max-width: 235px;
+    background-repeat: no-repeat;
+    margin: 2rem 0.5rem;
+}
+
+.game__brick[data-pristine] {
+    background-color: rgba(222, 212, 210, 0.5);
+}
+
+.game__start-btn {
+    width: 100px;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+    background: url("/src/img/button.png") no-repeat;
+}
+
+.game__brick.game__brick--state-0 {
+    background-image: url("/src/img/Symbol_0.png");
+}
+
+.game__brick.game__brick--state-1 {
+    background-image: url("/src/img/Symbol_1.png");
+}
+
+.game__brick.game__brick--state-2 {
+    background-image: url("/src/img/Symbol_2.png");
+}
+
+.game__brick.game__brick--state-3 {
+    background-image: url("/src/img/Symbol_3.png");
+}
+
+.game__brick.game__brick--state-4 {
+    background-image: url("/src/img/Symbol_4.png");
+}
+
+.game__brick.game__brick--state-5 {
+    background-image: url("/src/img/Symbol_5.png");
+}
+
+.game__start-btn[data-active] {
+    animation: rotate 0.7s linear infinite;
+    filter: grayscale(1);
+}
+
+.game__start-btn[data-active]:focus,
+.game__start-btn[data-active]:active {
+    outline: none;
+}
