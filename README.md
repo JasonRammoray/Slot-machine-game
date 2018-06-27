@@ -8,4 +8,4 @@ In order to launch the application:
 
 4) navigate to `http://localhost:3000` to browse the game
 
-In order to run quality checks type `npm run qa` in the terminal. This will run code static analysis, client side tests as well as e2e tests.
+In order to run quality checks type `npm run qa` in the terminal. This will run code static analysis, unit tests as well as e2e tests.
