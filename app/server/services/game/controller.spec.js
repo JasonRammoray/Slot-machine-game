@@ -10,10 +10,16 @@ describe('Game controller ->', () => {
         getCombinationScore: () => 2,
         getOutcome: score => `Score ${score}`
     };
-    beforeEach(ctrl = new GameController(mockGameRules));
-    beforeEach(combination = ctrl.generateCombination());
+    beforeEach(() => ctrl = new GameController(mockGameRules));
+    beforeEach(() => combination = ctrl.generateCombination());
 
     it('should generate values combination', () => {
         expect(combination.values).toEqual([1, 1, 1]);
+    });
+    it('should generate a bonus point', () => {
+        expect(combination.bonus).toBe(false);
+    });
+    it('should generate a game outcome', () => {
+        expect(combination.outcome).toBe('Score 2');
     });
 });

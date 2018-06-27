@@ -6,7 +6,7 @@
   "scripts": {
     "test:unit": "concurrently \"npm run test:unit:client\" && \"npm run test:unit:server\"",
     "test:unit:client": "echo 'No client tests'",
-    "test:unit:server": "jest app/** --notify --config=jest.config.json",
+    "test:unit:server": "jest --notify --config=jest.config.json",
     "test:e2e": "echo 'No e2e tests'",
     "lint": "eslint --ext .js,.spec.js app",
     "start": "node app/server/index.js 3000",

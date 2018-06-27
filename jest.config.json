@@ -1,5 +1,6 @@
 {
-  "bail": false,
   "verbose": true,
-  "coverageDirectory": "./coverage"
+  "bail": false,
+  "coverageDirectory": "./coverage",
+  "collectCoverage": true
 }

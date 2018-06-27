@@ -46,7 +46,7 @@ class GameRules {
      * @return {Boolean} boolean flag
      */
     getBonus() {
-        return Boolean(random.generate(0, 1));
+        return Boolean(random.generateOne(0, 1));
     }
 }
 
