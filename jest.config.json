@@ -1,0 +1,5 @@
+{
+  "bail": false,
+  "verbose": true,
+  "coverageDirectory": "./coverage"
+}

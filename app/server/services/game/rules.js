@@ -3,25 +3,23 @@ const MIN_VALUE = 0;
 const MAX_VALUE = 5;
 const random = require('../random');
 
+/**
+ * Game rules class encapsulates internal
+ * game mechanisms
+ */
 class GameRules {
     /**
      * Returns a randomly generated sequence of items
-     * @returns {Array<Number>} generated sequence
-     * @public
+     * @return {Array<Number>} generated sequence
      */
     getValues() {
-        const values = [];
-        for (let i = 0; i < VALUES_AMOUNT; i++) {
-            values.push(random.generate(MIN_VALUE, MAX_VALUE));
-        }
-        return values;
+        return random.generateSequence(MIN_VALUE, MAX_VALUE, VALUES_AMOUNT);
     }
 
     /**
      * Returns a combination score
      * @param {Array<Number>} values a sequence of values
      * @return {Number} score
-     * @public
      */
     getCombinationScore(values) {
         let score = 0;
@@ -37,7 +35,6 @@ class GameRules {
      * Returns a type of outcome for a given score
      * @param {Number} score combination score
      * @return {String} type of outcome
-     * @public
      */
     getOutcome(score) {
         return ['No Win', 'Small Win', 'Big Win'][score - 1] || 'Unknown';
@@ -46,8 +43,7 @@ class GameRules {
     /**
      * Returns a boolean flag indicating if bonus
      * is applicable or not
-     * @returns {Boolean} boolean flag
-     * @public
+     * @return {Boolean} boolean flag
      */
     getBonus() {
         return Boolean(random.generate(0, 1));

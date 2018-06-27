@@ -10,4 +10,4 @@ Progress:
 [ ] Api documentation
 [ ] Coverage report
 [ ] Favicon
-[ ] Private repo on BitBucket
+[ ] Private repo on BitBucket (https://bitbucket.org/ViacheslavMoskalenko/netent/src)

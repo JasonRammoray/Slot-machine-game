@@ -4,6 +4,7 @@
  * b) launches the server
  * c) sets a folder with static resources
  * @param {Object} app the application instance
+ * @param {Object} config a configuration object
  * @param {String} config.static an absolute path to server static files from
  * @param {Number} config.port a port the application should listen to
  */
