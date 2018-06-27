@@ -9,4 +9,4 @@ Progress:
 * [x] e2e tests
 * [x] Coverage report
 * [x] Favicon
-* [ ] Private repo on BitBucket (https://bitbucket.org/ViacheslavMoskalenko/netent/src)
+* [x] Private repo on BitBucket (https://bitbucket.org/ViacheslavMoskalenko/netent/src)
