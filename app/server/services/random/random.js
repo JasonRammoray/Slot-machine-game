@@ -5,8 +5,8 @@
 class Random {
     /**
      * Generates a random number within a given range (inclusively)
-     * @param {Number} from lower boundary
-     * @param {Number} to upper boundary
+     * @param {Number=} from lower boundary
+     * @param {Number=} to upper boundary
      * @return {Number} generated number
      */
     static generateOne(from = 0, to = Number.MAX_SAFE_INTEGER) {

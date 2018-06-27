@@ -1,22 +1,31 @@
 /**
- * Bootstraps the application:
- * a) bind routes
- * b) launches the server
- * c) sets a folder with static resources
- * @param {Object} app the application instance
- * @param {Object} config a configuration object
- * @param {String} config.static an absolute path to server static files from
- * @param {Number} config.port a port the application should listen to
+ * Bootstraps the application
+ * @return {Function} launch function
  */
-function bootstrapApp(app, config) {
+function bootstrapApp() {
     const express = require('express');
+    const app = express();
     const bindRoutes = require('../routes');
     bindRoutes(app);
-    app.use(express.static(config.static));
-    app.listen(
-        config.port,
-        () => `The server is up and running at http://localhost:${config.port}`
-    );
+
+    /**
+     * Launches the application
+     * @param {Object} config a configuration object
+     * @param {String} config.static an absolute path to server static files from
+     * @param {Number} config.port a port the application should listen to
+     * @param {Function=} config.onLaunch callback to be executed, when
+     * server is up and running
+     */
+    return config => {
+        app.use(express.static(config.static));
+        const defaultOnLaunch = () => {
+            console.log(`Server is listening at http://localhost:${config.port}`);
+        };
+        app.listen(
+            config.port,
+            config.onLaunch || defaultOnLaunch
+        );
+    };
 }
 
 module.exports = bootstrapApp;

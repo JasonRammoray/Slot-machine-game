@@ -1,8 +1,7 @@
-const express = require('express');
-const app = express();
 const path = require('path');
 const bootstrapApp = require('./bootstrap');
-bootstrapApp(app, {
+const launchApp = bootstrapApp();
+launchApp({
     static: path.join(__dirname, '..', 'client'),
     port: +process.argv[2] || 3000
 });
