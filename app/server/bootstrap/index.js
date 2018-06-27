@@ -15,13 +15,14 @@ function bootstrapApp() {
      * @param {Number} config.port a port the application should listen to
      * @param {Function=} config.onLaunch callback to be executed, when
      * server is up and running
+     * @return {Object} application server instance
      */
     return config => {
         app.use(express.static(config.static));
         const defaultOnLaunch = () => {
             console.log(`Server is listening at http://localhost:${config.port}`);
         };
-        app.listen(
+        return app.listen(
             config.port,
             config.onLaunch || defaultOnLaunch
         );
