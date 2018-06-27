@@ -1,15 +1,25 @@
 {
   "name": "netent",
   "version": "1.0.0",
-  "description": "",
+  "description": "A test task for NetEnt",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:unit": "echo 'No tests'",
+    "test:e2e": "echo 'No e2e tests'",
+    "lint:app": "eslint app/**/*.js",
+    "lint:tests": "eslint tests/**/*.js",
+    "lint": "npm run lint:app && npm run lint:tests",
+    "start": "node app/server/index.js 3000",
+    "qa": "npm run lint && npm run test:unit && npm run test:unit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-google": "^0.9.1"
   }
 }
