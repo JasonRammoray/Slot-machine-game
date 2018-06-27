@@ -1,4 +1,5 @@
 In order to launch the application:
+
 1) install latest node.js
 
 2) run `npm i` in the terminal to install all the dependencies
