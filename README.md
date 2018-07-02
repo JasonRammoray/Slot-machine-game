@@ -1,3 +1,5 @@
+Demo can be found __[here](https://slot-machine-game.herokuapp.com/)__.
+
 In order to launch the application:
 
 1) install latest node.js
