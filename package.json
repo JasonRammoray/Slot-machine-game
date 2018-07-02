@@ -1,7 +1,7 @@
 {
-  "name": "netent",
+  "name": "slot-machine-game",
   "version": "1.0.0",
-  "description": "A test task for NetEnt",
+  "description": "A slot machine game, which allows user to press a button and get one of four outcome: no win, small win, big win or a bonus move (triggered by the game automatically)",
   "main": "index.js",
   "scripts": {
     "test:unit": "jest --notify --config=jest.config.json",
