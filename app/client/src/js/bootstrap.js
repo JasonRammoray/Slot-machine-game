@@ -11,7 +11,7 @@ import Random from './services/random.js';
 function bootstrap() {
     return new AppController(
         new GameModel(Selectors, Random),
-        new GameService('http://localhost:3000/api/game')
+        new GameService('/api/game')
     );
 }
 
