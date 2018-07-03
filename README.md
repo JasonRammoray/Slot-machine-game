@@ -12,4 +12,4 @@ In order to launch the application:
 
 In order to run quality checks type `npm run qa` in the terminal. This will run code static analysis, unit tests as well as e2e tests. Please, note that e2e scenario will fail, if server is either not running, or running on a port other than 3000.
 
-To play the game, please, use a web browser, that supports [es6 modules](https://caniuse.com/#search=modules).
+To play the game, please, use a web browser supporting [es6 modules](https://caniuse.com/#search=modules).
