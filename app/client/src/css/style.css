@@ -32,6 +32,8 @@ html {
     max-width: 235px;
     background-repeat: no-repeat;
     margin: 2rem 0.5rem;
+    background-size: contain;
+    background-position-y: 50%;
 }
 
 .game__brick[data-pristine] {
@@ -44,6 +46,7 @@ html {
     border: none;
     cursor: pointer;
     background: url("/src/img/button.png") no-repeat;
+    background-size: cover;
 }
 
 .game__brick.game__brick--state-0 {

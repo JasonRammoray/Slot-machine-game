@@ -1,0 +1,9 @@
+@media screen and (max-width: 420px) {
+    html {
+        font-size: 10px;
+    }
+    .game__start-btn {
+        width: 60px;
+        height: 60px;
+    }
+}
