@@ -10,7 +10,7 @@ import OfflineBehaviour from './services/offline.js';
  * @return {Object} application controller instance
  */
 function bootstrap() {
-    new OfflineBehaviour().start();
+    new OfflineBehaviour().apply();
     return new AppController(
         new GameModel(Selectors, Random),
         new GameService('/api/game')

@@ -4,7 +4,8 @@ const styles = [
     'reset.css',
     'style.css',
     'animations.css',
-    'media.css'
+    'media.css',
+    'offline.css'
 ].map(style => `/src/css/${style}`);
 
 const logic = [
@@ -16,7 +17,8 @@ const logic = [
         'random.js',
         'offline.js',
         'delay.js',
-        'selectors.js'
+        'selectors.js',
+        'browser.js'
     ].map(service => `services/${service}`),
     'models/game.js'
 ].map(logic => `/src/js/${logic}`);
@@ -34,8 +36,7 @@ const pictures = [
 const urlsToCache = [
     ...styles,
     ...logic,
-    ...pictures,
-    '/'
+    ...pictures
 ];
 
 self.addEventListener('install', event => {
