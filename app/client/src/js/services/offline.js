@@ -33,6 +33,8 @@ class OfflineBehaviour {
 
         window.addEventListener('online', networkChangeHandler);
         window.addEventListener('offline', networkChangeHandler);
+        // Call handler right away to set a correct css class
+        networkChangeHandler();
 
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('/slot-machine-game-service-worker.js', {
