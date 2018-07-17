@@ -1,4 +1,5 @@
 import delay from './services/delay.js';
+import OfflineBehaviour from './services/offline.js';
 
 /**
  * Main application controller encapsulates
@@ -78,10 +79,13 @@ class AppController {
      * Plays a game.
      * In case if bonus is returned from a server side,
      * then game makes an additional move
-     * @return {undefined}
+     * @return {void}
      * @private
      */
     _play() {
+        if (!OfflineBehaviour.isOnline()) {
+            return console.warn('The game is in offline mode. Please, try again later');
+        }
         if (this._moveInProgress()) {
             return console.warn('Game move is still in progress');
         }

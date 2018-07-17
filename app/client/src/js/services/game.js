@@ -17,7 +17,8 @@ class GameService {
      */
     makeMove() {
         if (this._isFetching) {
-            return console.warn('Can not make a move. Data is still fetching');
+            console.warn('Can not make a move. Data is still fetching');
+            return Promise.resolve(null);
         }
         this._isFetching = true;
         return fetch(this._baseUrl, {
