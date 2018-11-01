@@ -17,17 +17,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.4"
   },
   "devDependencies": {
-    "concurrently": "^3.6.0",
-    "eslint": "^5.0.1",
+    "concurrently": "^3.6.1",
+    "eslint": "^5.8.0",
     "eslint-config-google": "^0.9.1",
-    "jest": "^23.2.0",
-    "nock": "^9.3.3",
-    "puppeteer": "^1.5.0",
-    "request": "^2.87.0",
-    "stylelint": "^9.3.0",
+    "jest": "^23.6.0",
+    "nock": "^9.6.1",
+    "puppeteer": "^1.9.0",
+    "request": "^2.88.0",
+    "stylelint": "^9.7.1",
     "stylelint-config-recommended": "^2.1.0"
   }
 }
