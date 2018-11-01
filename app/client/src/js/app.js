@@ -1,5 +1,5 @@
 import delay from './services/delay.js';
-import OfflineBehaviour from './services/offline.js';
+import Browser from './services/browser.js';
 
 /**
  * Main application controller encapsulates
@@ -83,7 +83,7 @@ class AppController {
      * @private
      */
     _play() {
-        if (!OfflineBehaviour.isOnline()) {
+        if (!Browser.isOnline()) {
             return console.warn('The game is in offline mode. Please, try again later');
         }
         if (this._moveInProgress()) {
